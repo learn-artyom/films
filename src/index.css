@@ -5,8 +5,16 @@
   background-color: rgba(18, 24, 41, 1);
 }
 
+body {
+  margin: 0;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.long-input {
+  width: 400px;
 }
