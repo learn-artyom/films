@@ -1,0 +1,36 @@
+.input {
+  position: relative;
+  width: 300px;
+}
+
+.input__element {
+  height: 64px;
+  border: 1px solid rgb(50, 59, 84);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  transition: 0.3s border-color;
+  color: #fff;
+  width: 100%;
+}
+
+.input__element:focus {
+  border-color: rgb(123, 110, 246);
+  outline: none;
+}
+
+.input__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: calc(50% - 12px);
+  left: 16px;
+}
+
+.input__icon + .input__element {
+  padding-left: 56px;
+}
+
+.input__icon--search {
+  background-image: url("./search.svg");
+}
