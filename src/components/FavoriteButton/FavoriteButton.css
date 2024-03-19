@@ -1,0 +1,29 @@
+.favorite-button {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #7b6ef6;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.favorite-button::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/like.svg");
+}
+
+.favorite-button--favorite {
+  color: #37d8a7;
+}
+.favorite-button--favorite::before {
+  background-image: url("/bookmark.svg");
+}
