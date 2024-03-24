@@ -1,0 +1,6 @@
+.films-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}

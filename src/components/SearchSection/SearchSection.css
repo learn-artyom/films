@@ -1,0 +1,13 @@
+.search-section {
+  margin-bottom: 80px;
+}
+.search-section__content {
+  max-width: 588px;
+  margin-bottom: 24px;
+}
+.search-section__control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 511px;
+}
