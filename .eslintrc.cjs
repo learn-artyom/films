@@ -6,6 +6,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
@@ -22,5 +23,7 @@ module.exports = {
     quotes: ["error", "single"],
     "react/prop-types": [0],
     indent: ["error", 2],
+    "eol-last": ["error", "always"],
+    "no-trailing-spaces": "error",
   },
 };

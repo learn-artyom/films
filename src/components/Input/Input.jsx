@@ -1,16 +1,19 @@
-import './Input.css';
+import styles from "./Input.module.css";
+import cn from "classnames";
 
-function Input({ onChange, placeholder, className, icon }) {
-  const classes = `input ${className}`;
-  const iconClasses = `input__icon input__icon--${icon}`;
-
+export default function Input({ onChange, placeholder, className, icon }) {
   return (
-    <div className={classes}>
-      {icon && <div className={iconClasses}></div>}
-      
-      <input className="input__element" onChange={onChange} placeholder={placeholder} />
+    <div className={cn(styles["input"], className)}>
+      {icon && (
+        <div
+          className={cn(styles["input__icon"], styles[`input__icon--${icon}`])}
+        ></div>
+      )}
+      <input
+        className={styles["input__element"]}
+        onChange={onChange}
+        placeholder={placeholder}
+      />
     </div>
   );
 }
-
-export default Input;
