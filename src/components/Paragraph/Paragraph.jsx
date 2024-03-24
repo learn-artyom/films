@@ -1,9 +1,14 @@
-import './Paragraph.css';
+import styles from "./Paragraph.module.css";
+import cn from "classnames";
 
-function Paragraph({ children, size = 'sm' }) {
-  const className = 'paragraph paragraph--' + size;
-  
-  return <p className={className}>{children}</p>;
+export default function Paragraph({ children, size = "sm" }) {
+  return (
+    <p
+      className={cn(styles["paragraph"], {
+        [styles[`paragraph--${size}`]]: size,
+      })}
+    >
+      {children}
+    </p>
+  );
 }
-
-export default Paragraph;

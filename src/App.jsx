@@ -1,13 +1,10 @@
-import './App.css';
-import Header from './layout/Header/Header';
-import Title from './components/Title/Title';
-import FilmsList from './components/FilmsList/FilmsList';
-import Body from './layout/Body/Body';
-import SearchSection from './components/SearchSection/SearchSection';
+import "./App.css";
+import Header from "./layout/Header/Header";
+import FilmsList from "./components/FilmsList/FilmsList";
+import Body from "./layout/Body/Body";
+import SearchSection from "./components/SearchSection/SearchSection";
 
 function App() {
-
-
   return (
     <>
       <Header />
@@ -15,7 +12,6 @@ function App() {
         <SearchSection />
         <FilmsList />
       </Body>
-  
     </>
   );
 }
