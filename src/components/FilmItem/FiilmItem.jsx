@@ -1,20 +1,15 @@
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import styles from "./FilmItem.module.css";
 
-import FavoriteButton from '../FavoriteButton/FavoriteButton';
-import './FilmItem.css';
-
-function FilmItem({ title, poster, rating, isFavorite}) {
+export default function FilmItem({ title, poster, rating, isFavorite }) {
   return (
-    <div className="film-item">
-      <figure className="film-item__poster">
-        <div className="film-item__rating">
-          {rating}
-        </div>
-        <img className="film-item__image" src={poster} />
+    <div className={styles["film-item"]}>
+      <figure className={styles["film-item__poster"]}>
+        <div className={styles["film-item__rating"]}>{rating}</div>
+        <img className={styles["film-item__image"]} src={poster} />
       </figure>
-      <div className="film-item__title">{title}</div>
+      <div className={styles["film-item__title"]}>{title}</div>
       <FavoriteButton isFavorite={isFavorite} />
     </div>
   );
 }
-
-export default FilmItem;
