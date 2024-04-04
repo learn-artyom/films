@@ -18,6 +18,11 @@
   outline: none;
 }
 
+.input__element--invalid,
+.input__element--invalid:focus {
+  border-color: #dc3545;
+}
+
 .input__icon {
   position: absolute;
   width: 24px;
