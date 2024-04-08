@@ -11,10 +11,12 @@ import {
   SET_VALUE_ACTION,
   SUMBIT_ACTION
 } from "./LoginForm.state";
+import { useUser } from "../../hooks/use-user.hook";
 
-export default function LoginForm({ onSumbit }) {
+export default function LoginForm() {
   const [formState, dispatchForm] = useReducer(loginFormReducer, INITAL_STATE);
   const { value, isValid, isFormReadyToSubmit } = formState;
+  const { onLogin } = useUser();
   const loginRef = useRef();
 
   const userLogin = (e) => {
@@ -42,10 +44,10 @@ export default function LoginForm({ onSumbit }) {
 
   useEffect(() => {
     if (isFormReadyToSubmit) {
-      onSumbit(value);
+      onLogin(value);
       dispatchForm({ type: CLEAR_ACTION });
     }
-  }, [isFormReadyToSubmit, value, onSumbit]);
+  }, [isFormReadyToSubmit, value, onLogin]);
 
   return (
     <form className={styles["login-form"]} onSubmit={userLogin}>

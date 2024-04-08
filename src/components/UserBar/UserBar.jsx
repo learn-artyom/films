@@ -1,7 +1,10 @@
 import styles from "./UserBar.module.css";
 import cn from "classnames";
+import { useUser } from "../../hooks/use-user.hook";
 
-export default function UserBar({ user, onLogout }) {
+export default function UserBar() {
+  const { user, onLogout } = useUser();
+
   const logout = (e) => {
     e.preventDefault();
     onLogout();
