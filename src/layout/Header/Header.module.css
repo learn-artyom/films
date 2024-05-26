@@ -27,14 +27,6 @@
   color: rgb(255, 255, 255);
 }
 
-.header-nav__link-login::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url("/login.svg");
-}
-
 .header-nav__counter-link {
   display: flex;
   align-items: center;

@@ -1,13 +1,14 @@
-import './FavoriteButton.css';
+import styles from "./FavoriteButton.module.css";
+import cn from "classnames";
 
-function FavoriteButton({ isFavorite }) {
-  const className = `favorite-button ${isFavorite ? 'favorite-button--favorite' : ''}`;
-
-  return  (
-    <button className={className}>
-      {isFavorite ? 'В избранном' : 'В избранное'}
+export default function FavoriteButton({ isFavorite }) {
+  return (
+    <button
+      className={cn(styles["favorite-button"], {
+        [styles["favorite-button--favorite"]]: isFavorite,
+      })}
+    >
+      {isFavorite ? "В избранном" : "В избранное"}
     </button>
   );
 }
-
-export default FavoriteButton;

@@ -14,7 +14,3 @@ body {
 *::after {
   box-sizing: border-box;
 }
-
-.long-input {
-  width: 400px;
-}
